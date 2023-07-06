@@ -19,7 +19,7 @@ def sync_streams(config, state, catalog):
 
     # Build the Invoiced client
     # config values are _always_ strings.
-    is_sandbox = config.get('sandbox') == 'true'
+    is_sandbox = config.get('sandbox') == True
     client = invoiced.Client(config['api_key'], is_sandbox)
 
     # Find the user-selected streams
